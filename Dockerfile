@@ -14,7 +14,9 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # 앱 코드 복사
 COPY app.py .
 COPY saved_model ./saved_model
-
+COPY handler.py .
+COPY model.py .
+COPY summary.py .
 # 포트 설정
 EXPOSE 8000
 
