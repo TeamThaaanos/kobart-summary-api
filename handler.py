@@ -65,8 +65,10 @@ def handler(event):
         summary_text = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
         return {
-            "summary": summary_text,
-            "consult_id": consult_id
+            "output": {
+                "summary_text": summary_text,
+                "consult_id": consult_id
+            }
         }
 
     except Exception as e:
